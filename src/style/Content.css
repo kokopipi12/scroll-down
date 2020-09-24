@@ -70,7 +70,7 @@ p {
      z-index: 2;
  }
 
- .img.reveal::before {
+ /* .img.reveal::before {
      background: #544c26;
      animation: blockRevealAnimation 0.8s ease forwards;
  }
@@ -116,4 +116,4 @@ p {
     100% {
         opacity: 1;
     }
-}
+} */
