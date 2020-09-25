@@ -60,7 +60,8 @@ p {
    max-width: 100%;
    opacity: 0; 
 }
- img::before {
+ 
+.img:before {
      content: "";
      position: absolute;
      top: 0;
@@ -70,7 +71,7 @@ p {
      z-index: 2;
  }
 
- /* .img.reveal::before {
+ .img.reveal::before {
      background: #544c26;
      animation: blockRevealAnimation 0.8s ease forwards;
  }
@@ -80,8 +81,8 @@ p {
  }
 
  @keyframes blockRevealAnimation {
-     o% {
-         ;left: -100%;
+     0% {
+         left: -100%;
      }
      40% {
          left: 0%;
@@ -116,4 +117,4 @@ p {
     100% {
         opacity: 1;
     }
-} */
+}
