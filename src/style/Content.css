@@ -37,6 +37,16 @@ p {
     animation: revealTextAnimation 0.64s ease forwards;
 }
 
+.text.hide {
+    color:transparent;
+    animation: hideTextAnimation 0.64s ease forwards;
+}
+
+.text.hide::before{
+    background: #6c2e13;
+    animation: blockHideAnimation 0.8s ease forwards;
+}
+
 .text::before{
     content: "";
     position: absolute;
@@ -76,6 +86,11 @@ p {
      animation: blockRevealAnimation 0.8s ease forwards;
  }
 
+ .img.hide::before {
+    background: #544c26;
+    animation: blockHideAnimation 0.8s ease forwards;
+}
+
  .img.reveal img {
      animation: revealImgAnimation 0.8s ease forwards;
  }
@@ -107,6 +122,18 @@ p {
     }
 } 
 
+@keyframes hideTextAnimation {
+    0% {
+        color: white;
+    }
+    100% {
+        color: transparent;
+    }
+   
+} 
+
+
+
 @keyframes revealImgAnimation {
     0% {
         opacity: 0;
@@ -116,5 +143,35 @@ p {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes hideImgAnimation {
+    0% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0
+        
+        ;
+    }
+}
+
+@keyframes blockHideAnimation {
+    0% {
+        left: 100%;
+    }
+    40% {
+        left: 0%;
+    }
+    60% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+        
     }
 }

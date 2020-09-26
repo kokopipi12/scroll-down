@@ -29,6 +29,11 @@ class Langkah1 extends Component {
                 console.log("Value of item :", item)
                  if ($(document).scrollTop() >= $(item).offset().top - 400) {
                      $(item).addClass("reveal");
+                     $(item).removeClass('hide');
+                 }
+                 else if (($(document).scrollTop() <= $(item).offset().top - 400)){
+                    $(item).addClass('hide');
+                    $(item).removeClass("reveal");
                  }
              });
         })
